@@ -1,0 +1,252 @@
+{
+  "implementation": "no_memory",
+  "kind": "practice",
+  "summary": {
+    "cases": 11,
+    "passed": 2,
+    "memory_hit_rate": 0.1818,
+    "avg_latency_ms": 0.0,
+    "avg_token_reduction": 0.8182,
+    "perfect": false,
+    "golden_points": 0
+  },
+  "results": [
+    {
+      "id": "E01",
+      "layer": "short_term",
+      "query": "Ten du an ca nhan toi vua nhac la gi?",
+      "passed": true,
+      "missing": [],
+      "forbidden_found": [],
+      "latency_ms": 0.0,
+      "retrieved_tokens": 133,
+      "full_source_tokens": 115,
+      "token_reduction": 0.0,
+      "short_term_stats": {
+        "messages_kept": 5,
+        "durable_notes": 0,
+        "compactions": 0,
+        "estimated_tokens": 133
+      },
+      "budget_breakdown": {},
+      "error": "",
+      "retrieved": "<RECENT_TURNS>\nuser: Ten du an ca nhan cua toi la ORCHID-27. Toi thich Python va khong thich Java. Khi giai thich code, hay dung vi du ngan.\nassistant: Da hieu: demo ca nhan ORCHID-27, uu tien Python, tranh Java, vi du ngan.\nuser: Toi dang hoc async/await va hay nham coroutine voi Task. Neu sau nay gap chu de nay, hay giai thich bang timeline.\nassistant: Toi se uu tien timeline khi giai thich coroutine va Task.\nuser: TODO: hoan thanh benchmark report truoc thu Sau luc 16:00. Day la open loop LAB-REPORT-1600.\n</RECENT_TURNS>"
+    },
+    {
+      "id": "E06",
+      "layer": "semantic",
+      "query": "Quy tac retry POST payment la gi?",
+      "passed": false,
+      "missing": [
+        "Idempotency-Key",
+        "max-3-retries",
+        "exponential-backoff"
+      ],
+      "forbidden_found": [],
+      "latency_ms": 0.0,
+      "retrieved_tokens": 0,
+      "full_source_tokens": 459,
+      "token_reduction": 1.0,
+      "short_term_stats": {},
+      "budget_breakdown": {},
+      "error": "",
+      "retrieved": ""
+    },
+    {
+      "id": "E09",
+      "layer": "long_term",
+      "query": "Lan uu tien stack backend nao cho LOTUS-88?",
+      "passed": false,
+      "missing": [
+        "LOTUS-88",
+        "Java",
+        "Spring Boot"
+      ],
+      "forbidden_found": [],
+      "latency_ms": 0.0,
+      "retrieved_tokens": 0,
+      "full_source_tokens": 44,
+      "token_reduction": 1.0,
+      "short_term_stats": {},
+      "budget_breakdown": {},
+      "error": "",
+      "retrieved": ""
+    },
+    {
+      "id": "E10",
+      "layer": "short_term",
+      "query": "Deadline review cu la khi nao?",
+      "passed": true,
+      "missing": [],
+      "forbidden_found": [],
+      "latency_ms": 0.2,
+      "retrieved_tokens": 195,
+      "full_source_tokens": 100,
+      "token_reduction": 0.0,
+      "short_term_stats": {
+        "messages_kept": 6,
+        "durable_notes": 2,
+        "compactions": 8,
+        "estimated_tokens": 195
+      },
+      "budget_breakdown": {},
+      "error": "",
+      "retrieved": "<SESSION_SUMMARY>\nuser: Constraint: REVIEW-DEADLINE-1600 - project review is Friday at 16:00 and must not be forgotten. | assistant: Acknowledged review constraint. | user: Filler turn 1 about UI spacing. | assistant: Filler answer 1. | user: Filler turn 2 about naming. | assistant: Filler answer 2. | user: Filler turn 3 about logging. | assistant: Filler answer 3.\n</SESSION_SUMMARY>\n<DURABLE_NOTES>\n- user: Constraint: REVIEW-DEADLINE-1600 - project review is Friday at 16:00 and must not be forgotten.\n- assistant: Acknowledged review constraint.\n</DURABLE_NOTES>\n<RECENT_TURNS>\nuser: Filler turn 4 about tests.\nassistant: Filler answer 4.\nuser: Filler turn 5 about docs.\nassistant: Filler answer 5.\nuser: Filler turn 6 about lint.\nassistant: Filler answer 6.\n</RECENT_TURNS>"
+    },
+    {
+      "id": "E02",
+      "layer": "long_term",
+      "query": "Voi demo ca nhan cua Minh, ngon ngu uu tien la gi?",
+      "passed": false,
+      "missing": [
+        "Python"
+      ],
+      "forbidden_found": [],
+      "latency_ms": 0.0,
+      "retrieved_tokens": 0,
+      "full_source_tokens": 221,
+      "token_reduction": 1.0,
+      "short_term_stats": {},
+      "budget_breakdown": {},
+      "error": "",
+      "retrieved": ""
+    },
+    {
+      "id": "E03",
+      "layer": "long_term",
+      "query": "Minh con open loop hay deadline nao chua hoan thanh?",
+      "passed": false,
+      "missing": [
+        "benchmark report",
+        "16:00"
+      ],
+      "forbidden_found": [],
+      "latency_ms": 0.0,
+      "retrieved_tokens": 0,
+      "full_source_tokens": 221,
+      "token_reduction": 1.0,
+      "short_term_stats": {},
+      "budget_breakdown": {},
+      "error": "",
+      "retrieved": ""
+    },
+    {
+      "id": "E04",
+      "layer": "episodic",
+      "query": "Lan truoc Minh fix async HTTP timeout bang cach nao?",
+      "passed": false,
+      "missing": [
+        "ClientSession",
+        "concurrency=20",
+        "ASYNC-FIX-20"
+      ],
+      "forbidden_found": [],
+      "latency_ms": 0.0,
+      "retrieved_tokens": 0,
+      "full_source_tokens": 221,
+      "token_reduction": 1.0,
+      "short_term_stats": {},
+      "budget_breakdown": {},
+      "error": "",
+      "retrieved": ""
+    },
+    {
+      "id": "E05",
+      "layer": "episodic",
+      "query": "Reflection cua su co async la gi, tang timeout co phai root fix khong?",
+      "passed": false,
+      "missing": [
+        "connection churn",
+        "timeout threshold"
+      ],
+      "forbidden_found": [],
+      "latency_ms": 0.0,
+      "retrieved_tokens": 0,
+      "full_source_tokens": 221,
+      "token_reduction": 1.0,
+      "short_term_stats": {},
+      "budget_breakdown": {},
+      "error": "",
+      "retrieved": ""
+    },
+    {
+      "id": "E07",
+      "layer": "mixed",
+      "query": "Hay chon huong dan code retry payment phu hop voi preference ca nhan cua Minh.",
+      "passed": false,
+      "missing": [
+        "Python",
+        "Idempotency-Key"
+      ],
+      "forbidden_found": [],
+      "latency_ms": 0.0,
+      "retrieved_tokens": 0,
+      "full_source_tokens": 565,
+      "token_reduction": 1.0,
+      "short_term_stats": {},
+      "budget_breakdown": {
+        "short_term": {
+          "limit_tokens": 800,
+          "raw_tokens": 0,
+          "used_tokens": 0
+        },
+        "long_term": {
+          "limit_tokens": 320,
+          "raw_tokens": 0,
+          "used_tokens": 0
+        },
+        "episodic": {
+          "limit_tokens": 240,
+          "raw_tokens": 0,
+          "used_tokens": 0
+        },
+        "semantic": {
+          "limit_tokens": 240,
+          "raw_tokens": 0,
+          "used_tokens": 0
+        }
+      },
+      "error": "",
+      "retrieved": ""
+    },
+    {
+      "id": "E11",
+      "layer": "semantic",
+      "query": "Theo incident playbook, truoc khi tang timeout can kiem tra gi?",
+      "passed": false,
+      "missing": [
+        "connection pooling",
+        "CONN-POOL-FIRST"
+      ],
+      "forbidden_found": [],
+      "latency_ms": 0.0,
+      "retrieved_tokens": 0,
+      "full_source_tokens": 565,
+      "token_reduction": 1.0,
+      "short_term_stats": {},
+      "budget_breakdown": {},
+      "error": "",
+      "retrieved": ""
+    },
+    {
+      "id": "E08",
+      "layer": "long_term",
+      "query": "Backend cua BLUEBIRD-42 bat buoc dung stack gi?",
+      "passed": false,
+      "missing": [
+        "BLUEBIRD-42",
+        "TypeScript",
+        "NestJS"
+      ],
+      "forbidden_found": [],
+      "latency_ms": 0.0,
+      "retrieved_tokens": 0,
+      "full_source_tokens": 288,
+      "token_reduction": 1.0,
+      "short_term_stats": {},
+      "budget_breakdown": {},
+      "error": "",
+      "retrieved": ""
+    }
+  ]
+}
